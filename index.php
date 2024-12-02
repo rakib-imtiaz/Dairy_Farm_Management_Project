@@ -34,29 +34,63 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DFMS - Login</title>
+    <title>MIM Dairy Farm - Login</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="icon" type="image/x-icon" href="/assets/images/favicon.ico">
 </head>
-<body class="min-h-screen bg-gray-50 flex flex-col">
+<body class="min-h-screen bg-gradient-to-b from-green-50 to-green-100 flex flex-col">
+    <!-- Top Bar -->
+    <div class="bg-green-800 text-white py-2 px-4">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <div class="text-sm">
+                Follow Us: 
+                <a href="#" class="ml-2 hover:text-green-200">Facebook</a>
+                <a href="#" class="ml-2 hover:text-green-200">Twitter</a>
+                <a href="#" class="ml-2 hover:text-green-200">LinkedIn</a>
+                <a href="#" class="ml-2 hover:text-green-200">Instagram</a>
+            </div>
+            <div class="text-sm">
+                Call Us: +012 345 6789
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <h1 class="text-2xl font-bold text-green-800">MIM Dairy Farm</h1>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#" class="text-green-800 hover:text-green-600">Home</a>
+                    <a href="#" class="text-green-800 hover:text-green-600">About</a>
+                    <a href="#" class="text-green-800 hover:text-green-600">Services</a>
+                    <a href="#" class="text-green-800 hover:text-green-600">Products</a>
+                    <a href="#" class="text-green-800 hover:text-green-600">Contact</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
     <div class="flex-grow flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
-        <div class="max-w-md w-full space-y-8">
+        <div class="max-w-md w-full space-y-8 bg-white p-8 rounded-lg shadow-lg">
             <!-- Logo/Header -->
             <div>
-                <h1 class="text-center text-3xl font-extrabold text-gray-900">
-                    DFMS
+                <h1 class="text-center text-3xl font-extrabold text-green-800">
+                    Welcome to MIM Dairy Farm
                 </h1>
-                <h2 class="mt-2 text-center text-2xl font-bold text-gray-900">
+                <h2 class="mt-2 text-center text-xl text-gray-900">
                     Sign in to your account
                 </h2>
                 <p class="mt-2 text-center text-sm text-gray-600">
-                    Dairy Farm Management System
+                    Bangladesh's Premier Dairy Management System
                 </p>
             </div>
 
             <!-- Demo Credentials -->
-            <div class="bg-blue-50 border border-blue-200 rounded-md p-4">
-                <p class="text-sm text-blue-800">
+            <div class="bg-green-50 border border-green-200 rounded-md p-4">
+                <p class="text-sm text-green-800">
                     <strong>Demo Credentials:</strong><br>
                     Username: admin<br>
                     Password: admin123
@@ -80,7 +114,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                name="username" 
                                type="text" 
                                required 
-                               class="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:ring-blue-500 focus:border-blue-500 focus:z-10 sm:text-sm" 
+                               class="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:ring-green-500 focus:border-green-500 focus:z-10 sm:text-sm" 
                                placeholder="Username"
                                value="<?php echo htmlspecialchars($username ?? ''); ?>">
                     </div>
@@ -92,7 +126,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                name="password" 
                                type="password" 
                                required 
-                               class="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-b-md focus:outline-none focus:ring-blue-500 focus:border-blue-500 focus:z-10 sm:text-sm" 
+                               class="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-b-md focus:outline-none focus:ring-green-500 focus:border-green-500 focus:z-10 sm:text-sm" 
                                placeholder="Password">
                     </div>
                 </div>
@@ -100,10 +134,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 <!-- Submit Button -->
                 <div>
                     <button type="submit" 
-                            class="group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
+                            class="group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-green-600 hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500">
                         <span class="absolute left-0 inset-y-0 flex items-center pl-3">
                             <!-- Lock Icon -->
-                            <svg class="h-5 w-5 text-blue-500 group-hover:text-blue-400" 
+                            <svg class="h-5 w-5 text-green-500 group-hover:text-green-400" 
                                  xmlns="http://www.w3.org/2000/svg" 
                                  viewBox="0 0 20 20" 
                                  fill="currentColor" 
@@ -121,10 +155,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     </div>
 
     <!-- Footer -->
-    <footer class="bg-gray-800">
+    <footer class="bg-green-800">
         <div class="max-w-7xl mx-auto py-4 px-4 sm:px-6 lg:px-8">
-            <p class="text-center text-sm text-gray-400">
-                &copy; <?php echo date('Y'); ?> Dairy Farm Management System. All rights reserved.
+            <p class="text-center text-sm text-white">
+                &copy; <?php echo date('Y'); ?> MIM Dairy Farm, Bangladesh. All rights reserved.
             </p>
         </div>
     </footer>
